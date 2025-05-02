@@ -1,0 +1,144 @@
+.edit-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+}
+
+.edit-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.edit-form h1 {
+  margin-bottom: 20px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-form .label {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.edit-form .features {
+  height: 160px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.edit-form button {
+  width: 48%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #333;
+  color: white;
+}
+
+.delete-button {
+  background-color: #A52B22;
+  color: white;
+  margin-left: 4%;
+}
+
+.live-preview {
+  flex: 1;
+  min-width: 300px;
+}
+
+.live-preview h2 {
+  margin-bottom: 15px;
+}
+
+.preview-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  /* text-align: center; */
+}
+
+.preview-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.preview-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.preview-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.price-category {
+  display: flex;
+  gap: 10px;
+  /* justify-content: center; */
+  text-transform: capitalize;
+}
+
+.features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+
+.features p li {
+  list-style: none;
+  line-height: 30px;
+}
+
+.radio {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.radio-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+
+.radio-select input {
+  margin-top: 15px;
+}
+
+/* Add product */
+.select {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

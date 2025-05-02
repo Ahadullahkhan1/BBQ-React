@@ -1,0 +1,203 @@
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-1 {
+    width: 65%;
+}
+
+.banner-1 img {
+    width: 100%;
+}
+
+
+.banner-2 {
+    width: 35%;
+    gap: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-2 img {
+    width: 100%;
+}
+
+.promotion,
+.Brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.promotion-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.promotion img {
+    width: 15%;
+}
+
+.promotion h1,
+.Brands h1 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Archivo, sans-serif;
+}
+
+.Departments {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.Departments img {
+    width: 48%;
+}
+
+.brand-images {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50px;
+    align-items: center;
+}
+
+.services {
+    margin: 20px;
+    padding: 20px;
+}
+
+.services img {
+    width: 100%;
+}
+
+.getmore {
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.getmore-card {
+    display: flex;
+    gap: 20px;
+}
+
+.getmore-card-icon {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.getmore-card-icon .icon {
+    font-size: 100px;
+    background-color: #E8E8E7;
+    border-radius: 50%;
+    padding: 20px;
+    border: 1px solid #a3a3a2;
+}
+
+.getmore-card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.getmore-card-title h5 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.getmore-card-title p {
+    font-size: 12px;
+    text-align: center;
+
+}
+
+@media (max-width:768px) {
+    .banner-2 {
+        gap: 10px;
+    }
+
+    .promotion h1 {
+        font-size: 20px;
+    }
+
+    .promotion-images {
+        flex-wrap: wrap;
+    }
+
+    .promotion-images img {
+        width: 25%;
+    }
+
+    .Departments {
+        flex-direction: column;
+    }
+
+    .Departments img {
+        width: 100%;
+    }
+
+    .brand-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand-images img {
+        width: 20%;
+    }
+
+    .getmore {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .getmore h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .getmore-card {
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .getmore-card-icon .icon {
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    .getmore-card-icon {
+        width: 49%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

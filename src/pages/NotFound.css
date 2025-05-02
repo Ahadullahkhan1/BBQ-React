@@ -1,0 +1,73 @@
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff4f2; /* light tint of the theme color */
+  }
+  
+  .number {
+    position: relative;
+    font: 900 30vmin 'Consolas', monospace;
+    letter-spacing: 5vmin;
+    color: #fff;
+    text-shadow: 
+      2px -1px 0 #000,
+      4px -2px 0 hsl(0, 50%, 10%),
+      6px -3px 0 hsl(0, 50%, 12%),
+      8px -4px 0 hsl(0, 50%, 14%),
+      10px -5px 0 hsl(0, 50%, 16%),
+      12px -6px 0 hsl(0, 50%, 18%),
+      14px -7px 0 hsl(0, 50%, 20%),
+      16px -8px 0 hsl(0, 50%, 22%);
+  }
+  
+  .number::before,
+  .number::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A52B22;
+    background-image: 
+      radial-gradient(closest-side at 50% 50%, #FFA07A 100%, transparent),
+      radial-gradient(closest-side at 50% 50%, #FF6347 100%, transparent);
+    background-repeat: no-repeat;
+    background-size: 40vmin 40vmin;
+    background-position: -100vmin 20vmin, 100vmin -25vmin;
+    mix-blend-mode: screen;
+    animation: moving 10s linear infinite both;
+  }
+  
+  @keyframes moving {
+    to {
+      background-position: 100vmin 20vmin, -100vmin -25vmin;
+    }
+  }
+  
+  .text {
+    font: 400 5vmin 'Courgette', cursive;
+    color: #A52B22;
+  }
+  
+  .text span {
+    font-size: 10vmin;
+  }
+  
+  .me {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #A52B22;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .me:hover {
+    color: #FF6347; /* lighter version for hover */
+  }
+  

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+.grill-title {
+    font-size: 25px;
+    margin: 50px 30px;
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+}
+
+.grill-Image {
+    width: 95%;
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.grill-title span {
+    font-size: 15px;
+    text-decoration: underline;
+    color: #A52B22;
+}
+
+.grill-Container {
+    width: 100%;
+    display: flex;
+
+}
+
+.grill-Sub-Container1 {
+    width: 25% ;
+    /* background-color: black; */
+}
+
+.grill-Sub-Container2 {
+    width: 75%;
+    /* background-color: red; */
+    padding-right: 50px;
+}
+
+/* Dropdown styling */
+.view-dropdown {
+    text-align: right;
+    padding: 10px;
+}
+
+.view-dropdown select {
+    padding: 8px 20px;
+    font-size: 14px;
+    /* border-radius: 5px; */
+    border: 1px solid #cccccc9f;
+    outline: none;
+}
+
+.view-dropdown option {
+    /* font-size: 18px; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Product display containers */
+.product-display.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* gap: 15px; */
+    padding: 10px;
+}
+
+.product-display.list {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    padding: 10px;
+}
+
+/* Individual product card */
+.product-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* gap: 10px; */
+    text-decoration: none;
+}
+
+.product-card .product-title {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: Archivo, sans-serif;
+}
+
+.product-card .product-price {
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Archivo, sans-serif;
+}
+
+.product-card .product-shipping {
+    color: #000000;
+    font-weight: 500;
+    font-family: Archivo, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    opacity: 0.8;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.product-card .product-features {
+    display: none;
+}
+
+.product-card .product-shipping span {
+    color: #A52B22;
+}
+
+.product-display.list .product-card {
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* gap: 20px; */
+    align-items: center;
+    width: 100%;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-display.list .product-card img {
+    margin-bottom: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.product-display.list .product-card .product-title {
+    font-size: 20px;
+}
+
+.product-display.list .product-card {
+    gap: 20px;
+}
+
+.product-display.list .product-info {
+    display: flex;
+    gap: 20px;
+}
+
+.product-display.list .product-info-1 {
+    width: 80%;
+}
+
+.product-display.list .product-info-2 {
+    width: 20%;
+}
+
+.product-display.list .product-card .product-features {
+    display: block;
+
+}
+
+.product-display.list .product-card .product-features ul {
+    /* gap: 20px; */
+    line-height: 40px;
+    /* margin-left: 25px */
+    /* font-size: 15px; */
+}
+
+.product-display.list .product-card .product-features ul li {
+    font-size: 15px;
+    font-family: Archivo, sans-serif;
+    list-style: circle inside;
+    color: black;
+    /* list-style: armenian; */
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 1024px) {
+    .grill-Container {
+        flex-direction: column;
+    }
+
+    .grill-Sub-Container1 {
+        width: 100%;
+    }
+
+    .grill-Sub-Container2 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .grill-Image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .product-display.grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .product-display.list .product-info {
+        flex-direction: column;
+    }
+
+    .product-display.list .product-info-1,
+    .product-display.list .product-info-2 {
+        width: 100%;
+    }
+
+    .product-display.list .product-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .product-display.list .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media screen and (max-width: 768px) {
+    .grill-title {
+        font-size: 20px;
+        margin: 30px 15px;
+    }
+
+    .grill-title span {
+        font-size: 13px;
+    }
+
+    .grill-Image {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .view-dropdown {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .view-dropdown select {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .product-display.grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-card .product-title {
+        font-size: 14px;
+    }
+
+    .product-card .product-price {
+        font-size: 16px;
+    }
+
+    .product-card .product-shipping {
+        font-size: 11px;
+    }
+
+    .view-dropdown {
+        text-align: right;
+        padding: 6px;
+    }
+
+    .view-dropdown select {
+        padding: 8px 10px;
+        font-size: 14px;
+        /* border-radius: 5px; */
+        border: 1px solid #cccccc9f;
+        outline: none;
+    }
+
+    .view-dropdown option {
+        font-size: 10px;
+        padding: 5px 2px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+    .grill-Sub-Container2{
+        width: 100% !important;
+    }
+}

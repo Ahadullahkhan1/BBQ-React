@@ -1,0 +1,75 @@
+.admin-dashboard {
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    
+}
+
+.admin-dashboard h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-dashboard thead {
+    background-color: #A52B22;
+    color: white;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.admin-dashboard tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.admin-dashboard tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-dashboard a {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.admin-dashboard a:hover {
+    background-color: #A52B22;
+    /* color: #333; */
+}
+
+.admin-product-image img {
+    width: 70px;
+    height: 70px;
+}
+.top-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-left: 20px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}

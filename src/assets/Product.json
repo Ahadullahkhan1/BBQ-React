@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Blaze 32-Inch 4-Burner LTE Gas Grill with Rear Burner",
+        "price": 1999,
+        "image": [
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/07/4lte-grill-top.webp",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-04-1024x1024-1.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-06-1024x1024-1-600x600.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-08-1024x1024-1-600x600.jpg"
+        ],
+        "category": "Grill",
+        "brand": "Blaze",
+        "features": [
+            "4 commercial quality 304 cast stainless steel burners",
+            "14,000 BTUs of cooking power per burner, for a total cooking surface of 56,000 BTUs",
+            "10,000 BTU infrared rear rotisserie burner",
+            "Total grill BTUs equal 66,000",
+            "Heavy 9mm triangular stainless steel cooking rods maximize durability and produce distinguished sear marks",
+            "715 square inches of total cooking space",
+            "Push and turn flame-thrower primary ignition system delivers a fast start every time",
+            "Flash tube ignition and crossovers provide an alternate ignition option0",
+            "Removable warming rack"
+        ],
+        "fuelType": "Natural Gas",
+        "burners": 2,
+        "rotisserie": true,
+        "madeInUSA": true
+    },
+    {
+        "id": 2,
+        "name": "Blaze 32-Inch 4-Burner LTE Gas Grill with Rear Burner",
+        "price": 9100,
+        "image": [
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-08-1024x1024-1-600x600.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/07/4lte-grill-top.webp",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-04-1024x1024-1.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-06-1024x1024-1-600x600.jpg"
+        ],
+        "category": "Grill",
+        "features": [
+            "4 commercial quality 304 cast stainless steel burners",
+            "14,000 BTUs of cooking power per burner, for a total cooking surface of 56,000 BTUs",
+            "10,000 BTU infrared rear rotisserie burner",
+            "Total grill BTUs equal 66,000",
+            "Heavy 9mm triangular stainless steel cooking rods maximize durability and produce distinguished sear marks",
+            "715 square inches of total cooking space",
+            "Push and turn flame-thrower primary ignition system delivers a fast start every time",
+            "Flash tube ignition and crossovers provide an alternate ignition option0",
+            "Removable warming rack"
+        ],
+        "fuelType": "Natural Gas",
+        "burners": 3,
+        "brand": "American Outdoor Grills",
+        "rotisserie": true,
+        "madeInUSA": false
+    },
+    {
+        "id": 3,
+        "name": "Blaze 32-Inch 4-Burner LTE Gas Grill with Rear Burner",
+        "price": 4000,
+        "image": [
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-06-1024x1024-1-600x600.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/07/4lte-grill-top.webp",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-04-1024x1024-1.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-08-1024x1024-1-600x600.jpg"
+        ],
+        "category": "Grill",
+        "brand": "Blaze",
+        "features": [
+            "4 commercial quality 304 cast stainless steel burners",
+            "14,000 BTUs of cooking power per burner, for a total cooking surface of 56,000 BTUs",
+            "10,000 BTU infrared rear rotisserie burner",
+            "Total grill BTUs equal 66,000",
+            "Heavy 9mm triangular stainless steel cooking rods maximize durability and produce distinguished sear marks",
+            "715 square inches of total cooking space",
+            "Push and turn flame-thrower primary ignition system delivers a fast start every time",
+            "Flash tube ignition and crossovers provide an alternate ignition option0",
+            "Removable warming rack"
+        ],
+        "fuelType": "Propane",
+        "burners": 4,
+        "rotisserie": false,
+        "madeInUSA": false
+    },
+    {
+        "id": 4,
+        "name": "Blaze 32-Inch 4-Burner LTE Gas Grill with Rear Burner",
+        "price": 8000,
+        "image": [
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-04-1024x1024-1.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/07/4lte-grill-top.webp",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-06-1024x1024-1-600x600.jpg",
+            "https://bbqgrillpeople.com/wp-content/uploads/2024/04/Blaze-Charcoal-Grill-08-1024x1024-1-600x600.jpg"
+        ],
+        "category": "Grill",
+        "brand": "Blaze",
+        "features": [
+            "4 commercial quality 304 cast stainless steel burners",
+            "14,000 BTUs of cooking power per burner, for a total cooking surface of 56,000 BTUs",
+            "10,000 BTU infrared rear rotisserie burner",
+            "Total grill BTUs equal 66,000",
+            "Heavy 9mm triangular stainless steel cooking rods maximize durability and produce distinguished sear marks",
+            "715 square inches of total cooking space",
+            "Push and turn flame-thrower primary ignition system delivers a fast start every time",
+            "Flash tube ignition and crossovers provide an alternate ignition option0",
+            "Removable warming rack"
+        ],
+        "fuelType": "Propane",
+        "burners": 5,
+        "rotisserie": false,
+        "madeInUSA": true
+    }
+]
