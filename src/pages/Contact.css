@@ -1,0 +1,165 @@
+.contact-top {
+    margin: 20px;
+    padding: 20px;
+}
+
+.contact-top img {
+    width: 100%;
+}
+
+.contact-top h1 {
+    font-size: 40px;
+}
+
+.contact-top h2 {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Archivo, sans-serif;
+}
+
+.contact-top p {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Archivo, sans-serif;
+}
+
+.contact-bottom {
+    display: flex;
+    width: 100%;
+    padding-inline: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-bottom-right {
+    width: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-bottom-right h1 {
+    font-size: 25px;
+    font-family: 600;
+    font-family: Archivo, sans-serif;
+
+}
+
+.contact-bottom-right li {
+    font-size: 14px;
+}
+
+.contact-bottom-right a {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-bottom-left {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-bottom-left h1 {
+    font-size: 30px;
+    font-family: Archivo, sans-serif;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.contact-bottom-left form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 40px;
+}
+
+.contact-bottom-left form label {
+    font-size: 15px;
+    color: black;
+    font-family: Archivo, sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contact-bottom-left input {
+    padding: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.contact-bottom-left textarea {
+    height: 100px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.contact-bottom-left form .button {
+    padding: 13px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #A52B22;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 1024px) {
+    .contact-top h1 {
+        margin-bottom: 20px;
+    }
+
+    .contact-bottom {
+        padding-inline: 10px;
+    }
+
+    .contact-bottom-left form {
+        width: 80%;
+    }
+
+    .contact-bottom-left h1 {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .contact-bottom {
+        flex-direction: column;
+        padding-inline: 0;
+    }
+
+    .contact-bottom-right {
+        width: 100%;
+    }
+
+    .contact-bottom-left {
+        width: 100%;
+    }
+
+    .contact-bottom-left form {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .contact-top h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .contact-top h2 {
+        font-size: 18px;
+    }
+
+    .contact-top p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

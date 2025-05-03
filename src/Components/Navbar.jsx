@@ -6,10 +6,15 @@ import { FaAngleDown, FaAngleRight, FaBarsStaggered, } from 'react-icons/fa6';
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
 import { BiCart, BiSearch, BiUser } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import CartSidebar from '../pages/Cart';
+import { FaTimes } from 'react-icons/fa';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../assets/firebase'; // adjust the path as needed
+
 
 const Navbar = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [suggestions, setSuggestions] = useState([]);
+    const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const { openSignIn } = useClerk();
@@ -18,15 +23,7 @@ const Navbar = () => {
     const toggleDropdown = () => setOpen(!open);
     const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
     const closeSidebar = () => setSidebarOpen(false);
-    const [isCartOpen, setIsCartOpen] = useState(false);
 
-    const handleCartClick = () => {
-      setIsCartOpen(!isCartOpen);
-    };
-  
-    const closeCart = () => {
-      setIsCartOpen(false);
-    };
     const renderDropdownMenu = () => (
         <ul className="dropdown-menu">
             <li className="dropdown-sub">
@@ -42,7 +39,49 @@ const Navbar = () => {
             </li>
             <li><Link to="/electricgrills">Electric Grills</Link></li>
         </ul>
+
     );
+    const handleSearch = async (e) => {
+        const value = e.target.value.toLowerCase();
+        setSearchTerm(value);
+
+        if (value.trim() === '') {
+            setSuggestions([]);
+            return;
+        }
+
+        try {
+            const querySnapshot = await getDocs(collection(db, 'products'));
+            const allProducts = querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            const filteredProducts = allProducts.filter(product =>
+                product.name.toLowerCase().includes(value)
+            );
+
+            if (filteredProducts.length > 0) {
+                setSuggestions(filteredProducts);
+            } else {
+                setSuggestions([{ id: null, name: 'No product found' }]);
+            }
+        } catch (error) {
+            console.error("Search error:", error);
+            setSuggestions([{ id: null, name: 'Error during search' }]);
+        }
+    };
+
+
+
+    const handleSelect = (id) => {
+        setSearchTerm('');
+        setSuggestions([]);
+        if (id) navigate(`/product/${id}`);
+    };
+
+
+
 
     return (
         <div>
@@ -70,9 +109,29 @@ const Navbar = () => {
 
                 <div className='mid-bar-mid'>
                     <div className='search'>
-                        <input type="text" placeholder='Search BBQ People...' />
+                        <input
+                            type="text"
+                            placeholder='Search BBQ People...'
+                            value={searchTerm}
+                            onChange={handleSearch}
+                        />
                         <BiSearch className='search-icon' />
+                        {searchTerm && (
+                            <ul className='search-suggestions'>
+                                {suggestions.map((item, index) => (
+                                    <li
+                                        key={index}
+                                        onClick={() => item.id && handleSelect(item.id)}
+                                        className={!item.id ? 'disabled' : ''}
+                                    >
+                                        {item.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+
                     </div>
+
                 </div>
 
                 <div className='mid-bar-right'>
@@ -108,16 +167,17 @@ const Navbar = () => {
                     </div>
 
                     <div className='cart'>
-                        <BiCart onClick={handleCartClick} className='cart-icon' />
-                        <CartSidebar isOpen={isCartOpen} onClose={closeCart} />
+                        {
+                            <Link to={'/viewcart'}><BiCart className='cart-icon' /></Link>
+                        }
                         <h1>My Cart</h1>
                     </div>
 
                 </div>
 
             </div>
-
             {/* Bottom Bar */}
+
             <div className='bottom-bar'>
                 <nav className="navbar">
                     <div className="hamburger" onClick={toggleSidebar}>

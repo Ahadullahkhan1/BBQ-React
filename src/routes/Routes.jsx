@@ -24,6 +24,8 @@ import CustomerTestimonials from '../pages/CustomerTestimonials'
 import DesignCenterLocations from '../pages/DesignCenterLocations'
 import NotFound from '../pages/NotFound'
 import AboutUs from '../pages/AboutUs.jsx'
+import ViewCart from '../pages/ViewCart.jsx'
+import Checkout from '../pages/Checkout.jsx'
 
 const AppRoutes = () => {
     return (
@@ -51,9 +53,9 @@ const AppRoutes = () => {
             <Route path="/customertestimonials" element={<CustomerTestimonials />} />
             <Route path="/designcenterlocations" element={<DesignCenterLocations />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/viewcart" element={<ViewCart />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<NotFound />} />
-
-            
         </Routes>
     )
 }

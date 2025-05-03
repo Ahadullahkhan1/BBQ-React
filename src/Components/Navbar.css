@@ -181,10 +181,14 @@
 
 .cart .cart-icon {
     font-size: 35px;
+    text-decoration: none;
+    color: black;
 }
-.phone{
+
+.phone {
     display: none;
 }
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -192,21 +196,21 @@
     padding: 10px 20px;
     /* background-color: #f5f5f5; */
     width: 100%;
-  }
-  
-  .nav-menu {
+}
+
+.nav-menu {
     display: flex;
     gap: 60px;
     list-style: none;
-  }
-  
-  .nav-menu li {
+}
+
+.nav-menu li {
     position: relative;
     color: black;
-  }
-  
-  .nav-menu a,
-  .nav-menu span {
+}
+
+.nav-menu a,
+.nav-menu span {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -214,14 +218,14 @@
     align-items: center;
     gap: 7px;
     font-size: 14px;
-  }
-  
-  /* First-level dropdown */
-  .dropdown:hover .dropdown-menu {
+}
+
+/* First-level dropdown */
+.dropdown:hover .dropdown-menu {
     display: block;
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -232,23 +236,23 @@
     min-width: 150px;
     list-style: none;
     z-index: 1000;
-  }
-  
-  .dropdown-menu li {
+}
+
+.dropdown-menu li {
     padding: 15px 15px;
     white-space: nowrap;
-  }
-  
-  .dropdown-menu li:hover {
+}
+
+.dropdown-menu li:hover {
     background-color: #A52B22;
-  }
-  
-  /* Second-level dropdown (nested) */
-  .dropdown-sub:hover .dropdown-menu-right {
+}
+
+/* Second-level dropdown (nested) */
+.dropdown-sub:hover .dropdown-menu-right {
     display: block;
-  }
-  
-  .dropdown-menu-right {
+}
+
+.dropdown-menu-right {
     position: absolute;
     top: 0;
     left: 100%;
@@ -258,10 +262,10 @@
     min-width: 150px;
     padding: 10px 0;
     list-style: none;
-  }
-  
-  /* Hamburger Button */
-  .hamburger {
+}
+
+/* Hamburger Button */
+.hamburger {
     display: none;
     cursor: pointer;
     /* z-index: 1100; */
@@ -271,10 +275,10 @@
     width: 30px;
     height: 30px;
     background: none;
-  }
-  
-  /* Sidebar */
-  .sidebar {
+}
+
+/* Sidebar */
+.sidebar {
     position: fixed;
     top: 0;
     right: -250px;
@@ -285,39 +289,68 @@
     transition: right 0.3s ease;
     z-index: 1000;
     padding-top: 70px;
-  }
-  
-  .sidebar.open {
+}
+
+.sidebar.open {
     right: 0;
-  }
-  
-  .sidebar ul {
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .sidebar ul li {
+}
+
+.sidebar ul li {
     padding: 20px;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .sidebar ul li a {
+}
+
+.sidebar ul li a {
     color: black;
     text-decoration: none;
     font-size: 16px;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
+}
+
+.search-suggestions {
+    position: absolute;
+    background-color: #fff;
+    width: 50%;
+    top: 144px;
+    left: 385px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    z-index: 100;
+    /* margin-top: 100px; */
+    border-radius: 5px;
+}
+
+.search-suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.search-suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-suggestions .disabled {
+    color: gray;
+    cursor: default;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
     .nav-menu {
-      display: none;
+        display: none;
     }
-  
+
     .hamburger {
-      display: block;
+        display: block;
     }
-  }
-  
+}
+
 
 @media screen and (max-width: 912px) {
     .top-bar h6 {
@@ -394,6 +427,10 @@
     .cart .cart-icon {
         font-size: 25px;
     }
+    .search-suggestions {
+        top: 100px;
+        left: 210px;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -427,10 +464,17 @@
     .cart-icon {
         font-size: 30px !important;
     }
-    .phone{
+
+    .phone {
         display: block;
     }
-    .hamburger{
+
+    .hamburger {
         z-index: 99;
+    }
+
+    .search-suggestions {
+        top: 90px;
+        left: 110px;
     }
 }

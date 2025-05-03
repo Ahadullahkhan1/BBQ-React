@@ -20,6 +20,7 @@ import { IoIosChatboxes } from 'react-icons/io';
 import { FaHandHoldingUsd, FaHome, FaThumbsUp } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { FaHelmetSafety } from 'react-icons/fa6';
+import contactBanner from './images/contact-us-Banner.webp'
 let images = {
     logo,
     blaze,
@@ -39,6 +40,7 @@ let images = {
     brand5,
     services,
     services2,
+    contactBanner
 }
 let getmore = [
     {
