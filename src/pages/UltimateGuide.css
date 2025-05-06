@@ -1,0 +1,126 @@
+.ultimate-guide-container {
+    background-image: url('../assets/images/banner-2.webp');
+    height: 90vh;
+    background-size: cover;
+}
+
+.ultimate-guide {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ultimate-guide h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Archivo, sans-serif;
+    width: 50%;
+    word-spacing: 3px;
+    line-height: 60px;
+    color: white
+}
+
+.ultimate-guide p {
+    font-size: 17px;
+    text-align: center;
+    font-family: Archivo, sans-serif;
+    color: white;
+    width: 50%;
+    line-height: 30px
+}
+
+.outdoor-kitchen-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+.outdoor-kitchen-container h1 {
+    font-size: 36px;
+    color: #A52B22;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.outdoor-kitchen-container h2 {
+    font-size: 24px;
+    color: #A52B22;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.outdoor-kitchen-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.outdoor-kitchen-container ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.outdoor-kitchen-container li {
+    margin-bottom: 8px;
+}
+
+.kitchen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.kitchen-section {
+    width: calc(50% - 10px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #A52B22;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.conclusion {
+    background-color: #fff3f2;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .outdoor-kitchen-container {
+        padding: 20px 15px;
+    }
+
+    .outdoor-kitchen-container h1 {
+        font-size: 28px;
+    }
+
+    .outdoor-kitchen-container h2 {
+        font-size: 20px;
+    }
+
+    .kitchen-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .outdoor-kitchen-container h1 {
+        font-size: 24px;
+    }
+
+    .outdoor-kitchen-container h2 {
+        font-size: 18px;
+    }
+
+    .outdoor-kitchen-container p,
+    .outdoor-kitchen-container li {
+        font-size: 15px;
+    }
+}

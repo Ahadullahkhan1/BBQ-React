@@ -26,6 +26,8 @@ import NotFound from '../pages/NotFound'
 import AboutUs from '../pages/AboutUs.jsx'
 import ViewCart from '../pages/ViewCart.jsx'
 import Checkout from '../pages/Checkout.jsx'
+import MaintainingYourOutdoorGrillTipsforLongevityandPerformance from '../pages/MaintainingYourOutdoorGrillTipsforLongevityandPerformance.jsx'
+import UltimateGuide from '../pages/UltimateGuide.jsx'
 
 const AppRoutes = () => {
     return (
@@ -55,6 +57,8 @@ const AppRoutes = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/viewcart" element={<ViewCart />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/maintainingyouroutdoorgrilltipsforlongevityandperformance" element={<MaintainingYourOutdoorGrillTipsforLongevityandPerformance />} />
+            <Route path="/ultimateguide" element={<UltimateGuide />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

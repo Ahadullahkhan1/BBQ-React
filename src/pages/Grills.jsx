@@ -63,8 +63,8 @@ const Grills = () => {
     return true;
   };
  
-  const visibleProducts = products.filter(filterGrills);
-  console.log(visibleProducts, "visibleProducts");
+  // const visibleProducts = products.filter(filterGrills);
+  // console.log(visibleProducts, "visibleProducts");
 
 
   const isAnyFilterApplied = Object.values(filters).some(filter => filter.length > 0);

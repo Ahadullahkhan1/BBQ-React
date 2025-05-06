@@ -21,12 +21,14 @@ import { FaHandHoldingUsd, FaHome, FaThumbsUp } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
 import { FaHelmetSafety } from 'react-icons/fa6';
 import contactBanner from './images/contact-us-Banner.webp'
+import banner4 from './images/banner-1.jpg'
 let images = {
     logo,
     blaze,
     banner1,
     banner2,
     banner3,
+    banner4,
     section2image1,
     section2image2,
     section2image3,
