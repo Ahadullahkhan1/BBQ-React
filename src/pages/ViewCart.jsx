@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useUser } from '@clerk/clerk-react';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import { db } from '../assets/firebase'; // ✅ Make sure your db is exported properly
+import { db } from '../assets/firebase';
 import './ViewCart.css'
 import { Link } from 'react-router-dom';
 const ViewCart = () => {
@@ -44,10 +44,10 @@ const ViewCart = () => {
         }
     };
 
-    const removeItem = async (itemId) => {
+    const removeItem = async (itemId, fuelType) => {
         if (!user) return;
 
-        const updatedCart = cart.filter(item => item.id !== itemId);
+        const updatedCart = cart.filter(item => !(item.id === itemId && item.fuelType === fuelType));
 
         try {
             const cartRef = doc(db, "carts", user.id);
@@ -57,6 +57,7 @@ const ViewCart = () => {
             console.error("Error removing item:", error);
         }
     };
+
 
     const calculateTotal = () => {
         return cart.reduce((total, item) => {
@@ -85,24 +86,27 @@ const ViewCart = () => {
                                     <button onClick={() => updateQuantity(item.id, item.qty + 1)}>+</button>
                                 </p>
                             </div>
-                            <button onClick={() => removeItem(item.id)} className="remove-item">
+                            <button onClick={() => removeItem(item.id, item.fuelType)} className="remove-item">
                                 Remove
                             </button>
+
                         </div>
 
                     ))
                 )}
             </div>
-            <div className='cart-footer'>
-                {cart.length > 0 && (
-                    <div className="cart-total">
-                        <h3>Total: ${calculateTotal()}</h3>
+            {
+                cart.length > 0 && (
+                    <div className='cart-footer'>
+                        <div className="cart-total">
+                            <h3>Total: ${calculateTotal()}</h3>
+                        </div>
+                        <Link to="/checkout" className='checkout-button'>
+                            Checkout
+                        </Link>
                     </div>
-                )}
-                {
-                    <Link to={'/checkout'} className='checkout-button'>Checkout</Link>
-                }
-            </div>
+                )
+            }
         </div>
     );
 };

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useUser } from '@clerk/clerk-react';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '../assets/firebase';
 import './Checkout.css';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   const { user } = useUser();
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -48,10 +51,33 @@ const Checkout = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Order Submitted:", formData, cart);
-    alert("Order placed successfully!");
+
+    if (cart.length === 0) {
+      toast.error("Cart is empty!");
+      return;
+    }
+
+    try {
+      const orderData = {
+        userId: user.id,
+        ...formData,
+        products: cart,
+        total: calculateTotal(),
+        createdAt: serverTimestamp()
+      };
+
+      await addDoc(collection(db, "orders"), orderData); // save order
+      await setDoc(doc(db, "carts", user.id), { products: [] }); // clear cart
+
+      setCart([]);
+      toast.success("Order placed successfully!");
+      navigate('/order-success');
+    } catch (error) {
+      console.error("Error placing order:", error);
+      toast.error("Failed to place order");
+    }
   };
 
   return (

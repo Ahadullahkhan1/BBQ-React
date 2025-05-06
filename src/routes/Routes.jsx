@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'  // Yeh line correct import hai
+import { Route, Routes } from 'react-router-dom'  
 import Grills from '../pages/Grills'
 import Accessories from '../pages/Accessories'
 import Contact from '../pages/Contact'
@@ -10,7 +10,7 @@ import BuiltInCharcoalGrills from '../pages/BuiltInCharcoalGrills'
 import PortableCharcoalGrills from '../pages/PortableCharcoalGrills'
 import KettleGrills from '../pages/KettleGrills'
 import ElectricGrills from '../pages/ElectricGrills'
-import FreestandingCharcoalGrills from '../pages/FreestandingCharcoalGrills' // Ye bhi zaroori hai agar use ho raha hai
+import FreestandingCharcoalGrills from '../pages/FreestandingCharcoalGrills'
 import Home from '../pages/Home'
 import ProductDetail from '../pages/ProductDetail'
 import EditProduct from '../pages/EditProduct'
@@ -30,6 +30,7 @@ import MaintainingYourOutdoorGrillTipsforLongevityandPerformance from '../pages/
 import UltimateGuide from '../pages/UltimateGuide.jsx'
 import UltimateChecklist from '../pages/UltimateChecklist.jsx'
 import GrillLike from '../pages/GrillLike.jsx'
+import OrderSuccess from '../pages/OrderSuccess.jsx'
 
 const AppRoutes = () => {
     return (
@@ -63,6 +64,7 @@ const AppRoutes = () => {
             <Route path="/ultimateguide" element={<UltimateGuide />} />
             <Route path="/ultimatechecklist" element={<UltimateChecklist />} />
             <Route path="/grilllike" element={<GrillLike />} />
+            <Route path="/order-success" element={<OrderSuccess />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

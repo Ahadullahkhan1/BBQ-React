@@ -2,17 +2,19 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../assets/firebase";
-import { useUser } from "@clerk/clerk-react"; // 👈 Clerk import
+import { useUser } from "@clerk/clerk-react";
 import "./ProductDetail.css";
 import useRefreshStore from "../store/RefreshStore";
+import toast from "react-hot-toast";
 
 const ProductDetail = () => {
     const { id } = useParams();
     const [productData, setProductData] = useState(null);
     const [mainImage, setMainImage] = useState("");
     const [loading, setLoading] = useState(true);
-    const { user } = useUser(); // 👈 Get Clerk user
-    const [refresh,setRefresh] = useState(false)
+    const { user } = useUser();
+    const [refresh, setRefresh] = useState(false)
+    const [selectedFuelType, setSelectedFuelType] = useState("");
     const toggleRefresh = useRefreshStore((state) => state.toggleRefresh);
     useEffect(() => {
         const fetchProduct = async () => {
@@ -22,13 +24,12 @@ const ProductDetail = () => {
 
                 if (docSnap.exists()) {
                     const data = docSnap.data();
-                    setProductData({ ...data, id }); // 👈 include product ID
+                    setProductData({ ...data, id });
                     setMainImage(data.imageUrl?.[0] || "");
                 } else {
-                    setProductData(null); // Product not found
+                    setProductData(null);
                 }
             } catch (error) {
-                console.error("Error fetching product:", error);
                 setProductData(null);
             } finally {
                 setLoading(false);
@@ -36,7 +37,7 @@ const ProductDetail = () => {
         };
 
         fetchProduct();
-    }, [id,refresh]);
+    }, [id, refresh]);
 
     const truncateDescription = (description, wordLimit = 40) => {
         const words = description.split(" ");
@@ -50,8 +51,14 @@ const ProductDetail = () => {
         setMainImage(img);
     };
 
+    const handleFuelTypeChange = (event) => {
+        setSelectedFuelType(event.target.value);
+    };
+
     const addToCart = async () => {
-        if (!user) return alert("Please log in first!");
+        if (!user) return toast.error("Please log in first!");
+
+        if (!selectedFuelType) return toast.error("Please select a fuel type!");
 
         const cartRef = doc(db, "carts", user.id);
         const cartSnap = await getDoc(cartRef);
@@ -61,19 +68,20 @@ const ProductDetail = () => {
             cartItems = cartSnap.data().products || [];
         }
 
-        const index = cartItems.findIndex(item => item.id === productData.id);
+        const productWithFuel = { ...productData, fuelType: selectedFuelType };
+
+        const index = cartItems.findIndex(item => item.id === productWithFuel.id && item.fuelType === selectedFuelType);
         if (index !== -1) {
             cartItems[index].qty += 1;
         } else {
-            cartItems.push({ ...productData, qty: 1 });
+            cartItems.push({ ...productWithFuel, qty: 1 });
         }
 
         await setDoc(cartRef, { products: cartItems });
-        alert("Added to cart");
-        toggleRefresh()
-        
-
+        toast.success('Product added to cart');
+        toggleRefresh();
     };
+
 
     if (loading) return <h2>Loading...</h2>;
     if (!productData) return <h2>Product not found</h2>;
@@ -109,11 +117,21 @@ const ProductDetail = () => {
                         )}
                         <p><strong>Rotisserie:</strong> {productData.rotisserie === "Yes" ? "Yes" : "No"}</p>
                         <p><strong>Made in USA:</strong> {productData.madeInUSA === "Yes" ? "Yes" : "No"}</p>
-                        <select name="fuelType" id="fueltype" className="fueltype-dropdown">
+                        <select
+                            name="fuelType"
+                            id="fueltype"
+                            className="fueltype-dropdown"
+                            onChange={handleFuelTypeChange}
+                            value={selectedFuelType}
+                        >
+                            <option value="">Select Fuel Type</option>
                             {productData.fuelType.map((item, index) => (
-                                <option key={index} value={item}>{item}</option>
+                                <option key={index} value={item}>
+                                    {item}
+                                </option>
                             ))}
                         </select>
+
                     </div>
                     <button className="add-to-cart-btn" onClick={addToCart}>Add to Cart</button>
                 </div>
