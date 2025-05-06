@@ -40,8 +40,8 @@ const Footer = () => {
                         <h1>Learn More</h1>
                         <Link to="/maintainingyouroutdoorgrilltipsforlongevityandperformance">Maintaining Your Outdoor Grill Tips for Longevity and Performance</Link>
                         <Link to="/ultimateguide">Ultimate Guide to Planning a Functional Outdoor Kitchen</Link>
-                        <Link to="/careers">Careers</Link>
-                        <Link to="/customertestimonials">Customer Testimonials</Link>
+                        <Link to="/ultimatechecklist">Ultimate Checklist for Planning a Functional Outdoor Kitchen</Link>
+                        <Link to="/grilllike">Grill Like a Pro: Essential Holiday Grilling Tips to Impress Your Guests</Link>
                     </div>
                 </div>
                 <div className='footer-links'>

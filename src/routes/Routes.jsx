@@ -28,6 +28,8 @@ import ViewCart from '../pages/ViewCart.jsx'
 import Checkout from '../pages/Checkout.jsx'
 import MaintainingYourOutdoorGrillTipsforLongevityandPerformance from '../pages/MaintainingYourOutdoorGrillTipsforLongevityandPerformance.jsx'
 import UltimateGuide from '../pages/UltimateGuide.jsx'
+import UltimateChecklist from '../pages/UltimateChecklist.jsx'
+import GrillLike from '../pages/GrillLike.jsx'
 
 const AppRoutes = () => {
     return (
@@ -59,6 +61,8 @@ const AppRoutes = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/maintainingyouroutdoorgrilltipsforlongevityandperformance" element={<MaintainingYourOutdoorGrillTipsforLongevityandPerformance />} />
             <Route path="/ultimateguide" element={<UltimateGuide />} />
+            <Route path="/ultimatechecklist" element={<UltimateChecklist />} />
+            <Route path="/grilllike" element={<GrillLike />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

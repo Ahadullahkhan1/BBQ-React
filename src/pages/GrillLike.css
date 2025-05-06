@@ -1,0 +1,169 @@
+/* Grill-like Container */
+.Grill-like-container {
+    background-image: url('../assets/images/banner-4.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Grill-like Section */
+.Grill-like {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Grill-like h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Archivo, sans-serif;
+    width: 50%;
+    word-spacing: 3px;
+    line-height: 60px;
+    color: white;
+}
+
+.Grill-like p {
+    font-size: 17px;
+    text-align: center;
+    font-family: Archivo, sans-serif;
+    color: white;
+    width: 50%;
+    line-height: 30px;
+}
+
+/* GrillMaintenance.css */
+
+/* Main grill maintenance container */
+.grill-maintenance {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-inline: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fefefe;
+}
+
+/* Section container styling */
+.section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Section title styling */
+.section h1 {
+    font-size: 1.6rem;
+    color: #bb2200;
+    margin-bottom: 0.8rem;
+}
+
+/* Section text styling */
+.section p,
+.section li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+}
+
+.section ul {
+    padding-left: 1.5rem;
+}
+
+.section strong {
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with width less than or equal to 1024px */
+@media (max-width: 1024px) {
+
+    .Grill-like-container,
+    .Grill-like {
+        height: 60vh;
+    }
+
+    .Grill-like h1 {
+        font-size: 40px;
+        width: 70%;
+        line-height: 50px;
+    }
+
+    .Grill-like p {
+        font-size: 15px;
+        width: 70%;
+    }
+
+    .grill-maintenance {
+        padding-inline: 20px;
+    }
+
+    .section h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* For devices with width less than or equal to 768px */
+@media (max-width: 768px) {
+    .Grill-like h1 {
+        font-size: 30px;
+        width: 80%;
+    }
+
+    .Grill-like p {
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .grill-maintenance {
+        padding-inline: 10px;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .section h1 {
+        font-size: 1.2rem;
+    }
+
+    .section p,
+    .section li {
+        font-size: 0.95rem;
+    }
+}
+
+/* For devices with width less than or equal to 480px */
+@media (max-width: 480px) {
+    .Grill-like h1 {
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .Grill-like p {
+        font-size: 13px;
+        width: 90%;
+    }
+
+    .grill-maintenance {
+        padding-inline: 5px;
+    }
+
+    .section h1 {
+        font-size: 1rem;
+    }
+
+    .section p,
+    .section li {
+        font-size: 0.9rem;
+    }
+}
