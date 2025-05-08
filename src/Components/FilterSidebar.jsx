@@ -21,14 +21,6 @@ const FilterSidebar = ({ onFilterChange }) => {
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const toggleMobileFilter = () => setIsMobileFilterOpen(!isMobileFilterOpen);
 
-  // const [state,setState] =useState({
-  //   brand: [],
-  //   burners: [],
-  //   fuelTypes: [],
-  //   rotisserie: [],
-  //   madeInUSA: [],
-  //   priceRanges: [],
-  // })
   const priceOptions = [
     { label: "$0 - $3000", value: "0-3000" },
     { label: "$3001 - $6000", value: "3001-6000" },
@@ -44,8 +36,6 @@ const FilterSidebar = ({ onFilterChange }) => {
       const uniqueBrands = [...new Set(data.map(item => item.brand))];
 
       const uniqueBurners = [...new Set(data.map(item => item.burners))];
-
-      // Flatten fuelType array in case of multiple values
       const uniqueFuel = [
         ...new Set(
           data.flatMap(item =>

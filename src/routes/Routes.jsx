@@ -31,6 +31,7 @@ import UltimateGuide from '../pages/UltimateGuide.jsx'
 import UltimateChecklist from '../pages/UltimateChecklist.jsx'
 import GrillLike from '../pages/GrillLike.jsx'
 import OrderSuccess from '../pages/OrderSuccess.jsx'
+import AdminOrders from '../pages/admin.jsx'
 
 const AppRoutes = () => {
     return (
@@ -65,6 +66,8 @@ const AppRoutes = () => {
             <Route path="/ultimatechecklist" element={<UltimateChecklist />} />
             <Route path="/grilllike" element={<GrillLike />} />
             <Route path="/order-success" element={<OrderSuccess />} />
+            <Route path="/admin" element={<AdminOrders />} />
+            
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

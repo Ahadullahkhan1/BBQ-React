@@ -147,13 +147,13 @@ const Navbar = () => {
                             <div className="dropdown-menu2">
                                 <p><strong>Phone:</strong> <a href="tel:(832) 510-1966">(832) 510-1966</a></p>
                                 <p><strong>Email:</strong> <a href="mailto:sales@bbqgrillpeople.com">Email Us</a></p>
-                                <div className="section">
+                                <div className="section2">
                                     <strong>Sales:</strong><br />
                                     Mon-Fri: 9am - 6pm CST<br />
                                     Sat: 9am - 5pm CST<br />
                                     Sun: Closed CST
                                 </div>
-                                <div className="section">
+                                <div className="section2">
                                     <strong>Support:</strong><br />
                                     Mon-Fri: 9am - 6pm CST<br />
                                     Sat and Sun: Closed

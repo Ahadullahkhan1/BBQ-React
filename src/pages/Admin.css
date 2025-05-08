@@ -1,0 +1,141 @@
+.admin-orders {
+    padding: 2rem;
+    /* background-color: #f7f9fc; */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.filter-options select {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #ccc;
+    /* border-radius: 8px; */
+    font-size: 1rem;
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem;
+}
+
+.order-list .product-image-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.order-list .product-image {
+    height: 200px;
+    width: 200px;
+}
+
+.order-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.order-card-header {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 1em;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.order-info p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.order-product-title {
+    font-size: 20px;
+}
+
+.order-product-name {
+    padding-left: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+.order-product-name li {
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.total-price {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.admin-buttons {
+    display: flex;
+    /* gap: 0.5rem; */
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.order-list .admin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.order-list .total-price {
+    text-align: center;
+}
+
+
+.admin-buttons button {
+    padding: 0.4rem 1rem;
+    font-size: 16px;
+    border: none;
+    /* border-radius: 6px; */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.admin-buttons button:hover {
+    opacity: 0.9;
+}
+
+.admin-buttons button.delete-btn {
+    background-color: #a52b22;
+    color: white;
+}
+
+.admin-buttons button:nth-child(1) {
+    background-color: #a52b22;
+    color: white;
+}
+
+.admin-buttons button:nth-child(2) {
+    background-color: #a52b22;
+    color: white;
+}
